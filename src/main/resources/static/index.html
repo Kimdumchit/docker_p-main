@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Hello I'm Koronba !</title>
+    <style>
+
+        ul li {
+            background-color: #f8f9fa; /* 배경색 */
+            border: 1px solid #dee2e6; /* 테두리 */
+            margin-bottom: 5px; /* 각 아이템 간 간격 */
+            padding: 10px; /* 패딩 */
+            border-radius: 5px; /* 둥근 테두리 */
+        }
+
+
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .profile-section {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .profile-info {
+            margin-top: 20px;
+        }
+
+        .section-title {
+            color: #007bff;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .btn-text {
+            background: none;
+            color: #007bff;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            font-size: 1rem;
+        }
+
+        #blogList {
+            overflow: hidden;
+        }
+        #loginButton {
+            margin-top: 10px;
+            margin-right: 15px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div class="container mt-3 mx-auto">
+    <div class="row">
+        <div class="col-md-12">
+            <button id="loginButton" class="btn btn-primary float-right">로그인</button>
+        </div>
+    </div>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="profile-section text-center">
+            <img src="../../../../../dd/1.jpg" alt="Profile Image" class="profile-image img-fluid mb-3 rounded-circle">
+            <h2 class="display-5">김영훈(Koronba)</h2>
+            <p class="lead">
+                <span class="badge badge-secondary badge-lg">Backend Developer</span>
+            </p>
+            <p class="lead">
+                <h5>develop stack</h5>
+                <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white">
+                <img src="https://img.shields.io/badge/springboot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white">
+                <img src="https://img.shields.io/badge/amazonaws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white">
+                <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+                <img src="https://img.shields.io/badge/docker-%230db7ed?style=for-the-badge&logo=docker&logoColor=white">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editProfileModal" style="display: none;">
+                Edit Profile
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col-md-6 mb-4">
+        <div class="section-title bg-primary text-white p-2 rounded-top">Education <button id="addEducationBtn" class="btn-text ml-2">+</button></div>
+        <div class="section-content p-3 border rounded-bottom">
+            <ul id="educationList"></ul>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="section-title bg-success text-white p-2 rounded-top">Projects <button id="addProjectBtn" class="btn-text ml-2">+</button></div>
+        <div class="section-content p-3 border rounded-bottom">
+            <ul id="projectList"></ul>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="section-title bg-info text-white p-2 rounded-top">Blogs <button id="addBlogBtn" class="btn-text ml-2">+</button></div>
+        <div class="section-content p-3 border rounded-bottom">
+            <ul id="blogList"></ul>
+        </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="section-title bg-warning text-dark p-2 rounded-top">Contacts <button id="addContactBtn" class="btn-text ml-2">+</button></div>
+        <div class="section-content p-3 border rounded-bottom">
+            <ul id="contactList"></ul>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="app.js"></script>
+
+
+    <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+    </div>
+
+</div>
+
+</body>
+
+</html>
